@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="movieSearch">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Search</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="movies">
+  <h1>Angular OMDB Movie Search</h1>
+
+  <form>
+    <label for="search">Enter Movie By Title</label>
+    <input type="search" id="search" placeholder="movie title e.g. Titanic" name="s" ng-model="searchTerm">
+    <a href="/#/{{searchTerm}}" ng-click=submit(searchTerm)>Submit</a>
+  </form>
+
+  <div ng-view></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
+  <script src="./javascripts/app.js"></script>
+  <script src="./javascripts/controllers.js"></script>
+
+</body>
+</html>
