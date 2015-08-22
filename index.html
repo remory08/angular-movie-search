@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Movie Search</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body ng-controller="movies">
-  <h1>Angular OMDB Movie Search</h1>
+  <header>
+    <a href="/"><h1>Angular OMDB Movie Search</h1></a>
+
+  </header>
 
   <form>
     <label for="search">Enter Movie By Title</label>
@@ -14,12 +17,15 @@
     <a href="/#/{{searchTerm}}" ng-click=submit(searchTerm)>Submit</a>
   </form>
 
-  <div ng-view></div>
+  <div ng-view class="view"></div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
   <script src="./javascripts/app.js"></script>
+  <script type="text/javascript" src="./javascripts/services.js"></script>
   <script src="./javascripts/controllers.js"></script>
+
+
 
 </body>
 </html>

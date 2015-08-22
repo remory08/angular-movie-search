@@ -1,17 +1,20 @@
 var app = angular.module("movieSearch", ["ngRoute"]);
 
-app.config(function($routeProvider, $locationProvider) {
+// function configFn($routeProvider, $locationProvider) {
+//   $routeProvider
+//     .when('/:something', {
+//       templateUrl: 'partials/movies.html',
+//       controller: 'movies'
+//     })
+//     .when('/:id/show', {
+//       templateUrl: 'partials/show.html',
+//       controller: 'movie'
+//     })
+//     .otherwise({
+//       redirectTo: '/'
+//     })
+// }
+//
+// app.config(  ['$routeProvider', '$locationProvider', configFn])
 
-  $routeProvider
-    .when('/:something', {
-      templateUrl: 'partials/movies.html',
-      controller: 'movies'
-    })
-    .when('/:id/show', {
-      templateUrl: 'partials/show.html',
-      controller: 'movie'
-    })
-    .otherwise({
-      templateUrl: 'partials/404.html'
-    })
-})
+function configFn(o){o.when("/:something",{templateUrl:"partials/movies.html",controller:"movies"}).when("/:id/show",{templateUrl:"partials/show.html",controller:"movie"}).otherwise({redirectTo:"/"})}app.config(["$routeProvider","$locationProvider",configFn]);

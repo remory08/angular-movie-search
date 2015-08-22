@@ -1,5 +1,11 @@
 <h2>Movies Partial</h2>
 
-<div ng-repeat="movie in movieData">
-  <a href="/#/{{movie.imdbID}}/show">{{movie.Title}}</a>
+<div ng-repeat="movie in movieData" class="movie">
+  <a href="/#/{{movie.imdbID}}/show">
+    <article>
+      <p class="title">{{movie.Title}}</p>
+      <p>Year: {{movie.Year}}</p>
+      <p>Type {{movie.Type}}</p>
+      </article>
+  </a>
 </div>

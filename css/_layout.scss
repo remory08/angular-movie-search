@@ -1,0 +1,64 @@
+header {
+  background-color: black;
+  position:absolute;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 30px;
+
+  h1 {
+    color: white;
+    font-size: 30px;
+  }
+
+  a {
+    color: white;
+    float: right;
+  }
+}
+
+form {
+  clear: both;
+  position: relative;
+  border: 1px solid red;
+  top: 120px;
+  width: 50%;
+  margin-left: 25%;
+
+  label, input, a {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  input {
+    padding: 10px;
+    line-height: 1.5;
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+.view {
+  position: absolute;
+  top: 270px;
+  border: 1px solid blue;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.movie {
+  width: 45%;
+  margin: 5% 2.5%;
+  height: 80px;
+  border: 1px solid green;
+  position: relative;
+  float: left;
+
+  a {
+    text-decoration: none;
+  }
+
+  .title {
+    text-align: center;
+  }
+}
